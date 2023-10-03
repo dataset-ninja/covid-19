@@ -92,6 +92,9 @@ def convert_and_upload_supervisely_project(
         mask_np = sly.imaging.image.read(mask_path)[:, :, 0]
         mask = mask_np == 255
         curr_bitmap = sly.Bitmap(mask)
+        mask_shape = (mask_np.shape[1], mask_np.shape[0])
+        image_shape = (image_np.shape[1], image_np.shape[0])
+        curr_label = curr_label.resize(mask_shape, image_shape)
         curr_label = sly.Label(curr_bitmap, obj_class)
         labels.append(curr_label)
 
