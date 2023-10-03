@@ -1,0 +1,1 @@
+License is unknown for the COVID-19 Radiography dataset.
