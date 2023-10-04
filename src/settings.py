@@ -24,7 +24,7 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical(), Research.Medical()]
 CATEGORY: Category = Category.Medical()
 
-CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation()]
+CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation(), CVTask.Classification()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.SemanticSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
