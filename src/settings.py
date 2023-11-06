@@ -43,7 +43,7 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/covid-19"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = ["https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database"]
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,12 +51,13 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = {"Paper One":"https://ieeexplore.ieee.org/document/9144185", "Paper Two": "https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub"}
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://ieeexplore.ieee.org/document/9144185",  "https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = "https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database"
 AUTHORS: Optional[List[str]] = ["Muhammad E. H. Chowdhury", "Tawsifur Rahman", "Amith Khandakar", "Rashid Mazhar", "Muhammad Abdul Kadir", "Zaid Bin Mahbub", "Khandakar R. Islam", "Muhammad Salman Khan", "Prof. Atif Iqbal", "Nasser Al-Emadi", "Prof. Mamun Bin Ibne Reaz"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["mchowdhury@qu.edu.qa"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Qatar University", "University of Dhaka", "Hamad General Hospital", "North South University", "Bangabandhu Sheikh Mujib Medical University", "University of Engineering and Technology", "Universiti Kebangsaan Malaysia"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["http://www.qu.edu.qa/", "https://www.du.ac.bd/", "https://www.hamad.qa/", "http://www.northsouth.edu/", "https://bsmmu.ac.bd/", "https://www.uet.edu.pk/", "https://www.ukm.my/portalukm/"]
@@ -110,6 +111,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
