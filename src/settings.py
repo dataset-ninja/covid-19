@@ -63,7 +63,9 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Qatar University", "Unive
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["http://www.qu.edu.qa/", "https://www.du.ac.bd/", "https://www.hamad.qa/", "http://www.northsouth.edu/", "https://bsmmu.ac.bd/", "https://www.uet.edu.pk/", "https://www.ukm.my/portalukm/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"Also, the dataset contains ***covid***, ***lung_opacity***, ***normal*** and ***viral_pneumonia*** tags"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "classification image sets":["covid", "lung_opacity", "normal", "viral_pneumonia"],
+}
 TAGS: Optional[List[str]] = None
 
 
